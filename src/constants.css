@@ -1,0 +1,13 @@
+:root {
+    --square-size : 70px;
+    --light-square : #fcb045;
+    --dark-square : #833ab4;
+    --highlight : rgba(165, 0, 0, 0.1);
+    --check : #eb6464;
+}
+
+@media all and (max-width: 450px) {
+    :root {
+        --square-size : 50px;
+    }
+}

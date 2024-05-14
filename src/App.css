@@ -1,0 +1,25 @@
+@import './constants.css';
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: #cfc8c8;
+  font-family: 'Sofia Sans', sans-serif;
+}
+
+button {
+  background: var(--dark-square);
+  color: var(--light-square);
+  border: 0 none;
+  padding: 10px 30px;
+  margin: 10px 0;
+  font-size: 1.1em;
+  border-radius: 20px;
+} 

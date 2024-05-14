@@ -1,0 +1,8 @@
+.cols {
+    color : var(--dark-square);
+    height: calc(.25*var(--square-size));
+    grid-column: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

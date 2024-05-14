@@ -1,0 +1,17 @@
+.wins {
+    height: var(--square-size);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.wins.White {background-image: url('../../../assets/wk_king-white.svg');}
+
+.wins.Black {background-image: url('../../../assets/bk_king-black.svg');}
+
+.draws {
+    height: var(--square-size);
+    background-size: contain;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 35% center,65% center;
+    background-image: url('../../../assets/wk_king-white.svg'),url('../../../assets/bk_king-black.svg')
+}

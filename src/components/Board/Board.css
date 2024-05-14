@@ -1,0 +1,105 @@
+.board {
+  display: grid;
+  position: relative;
+  grid-template-columns: calc(0.25 * var(--square-size)) calc(
+      8 * var(--square-size)
+    );
+}
+
+.squares {
+  display: grid;
+  grid-template-columns: repeat(8, var(--square-size));
+  grid-template-rows: repeat(8, var(--square-size));
+  width: calc(8 * var(--square-size));
+}
+.square {
+  position: relative;
+}
+.square--light {
+  background-color: var(--light-square);
+}
+.square--dark {
+  background-color: var(--dark-square);
+}
+.highlight {
+    opacity: 1 !important;
+}
+.attacking:after {
+  display: block;
+  position: absolute;
+  content: "";
+  border: 6px solid #ff0000;
+  width: calc(var(--square-size) - 12px);
+  height: calc(var(--square-size) - 12px);
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+}
+.checked:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: var(--square-size);
+  height: var(--square-size);
+  background: var(--check);
+  border-radius: 20px;
+  left: 0;
+  top: 0;
+}
+
+.disable-squares {
+    opacity: 0.5;
+}
+
+.currentGamer {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  background: linear-gradient(90deg, rgba(131,58,180,1) 35%, rgba(252,176,69,1) 100%);
+  border-radius: 20px;
+}
+
+.newGameBtn {
+  border-radius: 20px;
+  display: block;
+  margin-left: auto;
+}
+
+button {
+  border: none;
+  text-align: center;
+  width: 220px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+button{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
